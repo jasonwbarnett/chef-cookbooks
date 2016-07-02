@@ -1,0 +1,6 @@
+# This file is maintained by Chef. Do not edit, all changes will be
+# overwritten. See bw_nsswitch/README.md
+
+<% node['bw_nsswitch']['databases'].to_hash.each do |db, sources| -%>
+<%=  db %>: <%= sources.join(' ') %>
+<% end -%>

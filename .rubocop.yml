@@ -110,7 +110,7 @@ Performance/TimesMap:
 Performance/RedundantMerge:
   Enabled: false
 
-# Bug with constants? https://phabricator.fb.com/P56108678
+# Bug with constants? https://phabricator.bw.com/P56108678
 Style/ConditionalAssignment:
   Enabled: false
 

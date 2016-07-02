@@ -1,0 +1,7 @@
+<%  node['bw_limits'].keys.sort.each do |domain| %>
+<%    node['bw_limits'][domain].to_hash.each do |item, hash| %>
+<%      hash.each do |type,value| %>
+<%=       "%-15s %-15s %-15s %-15s" % [ domain, type, item, value ] %>
+<%      end %>
+<%    end %>
+<%  end %>

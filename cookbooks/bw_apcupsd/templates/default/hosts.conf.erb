@@ -1,0 +1,6 @@
+# This file is maintained by Chef. Do not edit, all changes will be
+# overwritten. See bw_apcupsd/README.md
+
+<% node['bw_apcupsd']['hosts'].to_hash.each do |address, description| -%>
+MONITOR <%= address %> "<%= description %>"
+<% end -%>

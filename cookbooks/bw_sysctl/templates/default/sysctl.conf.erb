@@ -1,0 +1,4 @@
+# This file is created by Chef. See bw_sysctl/README.md
+<% node['bw_sysctl'].keys.sort.each do |key| %>
+<%=  key %> = <%= node['bw_sysctl'][key] %>
+<% end %>

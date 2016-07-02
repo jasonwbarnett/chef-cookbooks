@@ -1,0 +1,6 @@
+# This file is maintained by Chef. Do not edit, all changes will be
+# overwritten. See bw_ethers/README.md
+
+<% node['bw_ethers']['entries'].to_hash.each do |hwaddr, ipaddr| -%>
+<%=  hwaddr %> <%= ipaddr %>
+<% end -%>

@@ -77,8 +77,8 @@ There are two reasons we use attribute-driven APIs:
    nodes, but not on any new nodes.
 
    For this reason we use templates to take over a whole configuration wherever
-   possible. All cron jobs in our `fb_cron` API are written to
-   `/etc/cron.d/fb_crontab` - one you delete the lines adding a cronjob, since
+   possible. All cron jobs in our `bw_cron` API are written to
+   `/etc/cron.d/bw_crontab` - one you delete the lines adding a cronjob, since
    they are just entries in a hash, when the template is generated on the next
    Chef run, those crons go away.
 
@@ -94,17 +94,17 @@ How you formulate your runlists is up to your site, as long as you follow the
 basic rule that core cookbooks come first and you order least-specific to
 most-specific. At Facebook, all of our runlists are:
 
-    recipe[fb_init], recipe[$SERVICE]
+    recipe[bw_init], recipe[$SERVICE]
 
-Where `fb_init` is similar to the sample provided in this repo, but with extra
+Where `bw_init` is similar to the sample provided in this repo, but with extra
 "core cookbooks."
 
-We generally think of this way: `fb_init` should make you a "Facebook server" 
+We generally think of this way: `bw_init` should make you a "Facebook server" 
 and the rest should make you a whatever-kind-of-server-you-are.
 
 
 ## Getting started
 
-Grab a copy of the repo, rename `fb_init_sample` to fb_init, and follow the
+Grab a copy of the repo, rename `bw_init_sample` to bw_init, and follow the
 instructions in the README.md (coordinating guidance is in comments in the
 default recipe).
